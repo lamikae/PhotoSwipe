@@ -432,7 +432,7 @@ var _isOpen,
 			args.shift();
 
 			for(var i = 0; i < listeners.length; i++) {
-				listeners[i].apply(self, args);
+				listeners[i] && listeners[i].apply(self, args);
 			}
 		}
 	},
